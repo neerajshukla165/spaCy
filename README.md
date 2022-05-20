@@ -2,7 +2,7 @@
 
 spaCy is a free, open-source library for advanced Natural Language Processing (NLP) in Python.
 
-#The nlp object
+##The nlp object
 At the center of spaCy is the object containing the processing pipeline. We usually call this variable "nlp".
 
 For example, to create an English nlp object, you can import spacy and use the spacy.blank method to create a blank English pipeline. You can use the nlp object like a function to analyze text.
@@ -15,7 +15,7 @@ import spacy
 nlp = spacy.blank("en")
 ```
 
-#The Doc object
+##The Doc object
 When you process a text with the nlp object, spaCy creates a Doc object – short for "document". The Doc lets you access information about the text in a structured way, and no information is lost.
 ```
 # Created by processing a string of text with the nlp object
@@ -31,7 +31,7 @@ world
 !
 ```
 
-#The Token object
+##The Token object
 Token objects represent the tokens in a document – for example, a word or a punctuation character.
 To get a token at a specific position, you can index into the doc.
 Token objects also provide various attributes that let you access more information about the tokens. For example, the .text attribute returns the verbatim token text.
@@ -49,7 +49,7 @@ print(token.text)
 Output: world
 ```
 
-#The Span object
+##The Span object
 A Span object is a slice of the document consisting of one or more tokens. It's only a view of the Doc and doesn't contain any data itself.
 
 To create a span, you can use Python's slice notation. For example, 1:3 will create a slice starting from the token at position 1, up to – but not including! – the token at position 3.
@@ -63,7 +63,7 @@ span = doc[1:3]
 print(span.text)
 ```
 
-#Lexical Attributes
+##Lexical Attributes
 Here you can see some of the available token attributes:
 i is the index of the token within the parent document.
 text returns the token text.
