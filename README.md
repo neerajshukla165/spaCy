@@ -21,6 +21,7 @@ When you process a text with the nlp object, spaCy creates a Doc object – shor
 # Created by processing a string of text with the nlp object
 doc = nlp("Hello world!")
 
+
 # Iterate over tokens in a Doc
 for token in doc:
     print(token.text)
