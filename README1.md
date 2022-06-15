@@ -19,7 +19,7 @@ doc = nlp("This is a sentence.")
 print(doc.text)
 ```
 
-# DOCUMENTS, SPAN AND TOKENS
+## DOCUMENTS, SPAN AND TOKENS
 
 When you call nlp on a string, spaCy first tokenizes the text and creates a document object. In this exercise, you’ll learn more about the Doc, as well as its views Token and Span.
 
@@ -43,7 +43,7 @@ first_token = doc[0]
 print(first_token.text)
 ```
 
-# TRAINED PIPELINES
+## TRAINED PIPELINES
 
 What are trained pipelines?
 Models that enable spaCy to predict linguistic attributes in context
@@ -63,7 +63,7 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 ```
 
-## Predicting Part-of-speech Tags
+### Predicting Part-of-speech Tags
 Let's take a look at the model's predictions. In this example, we're using spaCy to predict part-of-speech tags, the word types in context.
 First, we load the small English pipeline and receive an nlp object.
 Next, we're processing the text "She ate the pizza".
@@ -93,7 +93,7 @@ the DET
 pizza NOUN
 ```
 
-## Predicting Syntactic Dependencies
+### Predicting Syntactic Dependencies
 
 In addition to the part-of-speech tags, we can also predict how the words are related. For example, whether a word is the subject of the sentence or an object.
 The .dep_ attribute returns the predicted dependency label.
@@ -113,7 +113,7 @@ pizza NOUN dobj ate
 ![nsubject](https://user-images.githubusercontent.com/79436509/169543311-593c660b-3bb9-455d-8956-bf1e24b36a58.PNG)
 
 
-## Predicting Named Entities
+### Predicting Named Entities
 
 Named entities are "real world objects" that are assigned a name – for example, a person, an organization or a country.
 The doc.ents property lets you access the named entities predicted by the named entity recognition model.
@@ -134,7 +134,7 @@ U.K. GPE
 $1 billion MONEY
 ```
 
-# LOADING PIPELINES
+## LOADING PIPELINES
 
 Use **spacy.load** to load the small English pipeline **"en_core_web_sm"**.
 Process the text and print the document text.
@@ -154,7 +154,7 @@ doc = nlp(text)
 print(doc.text)
 ```
 
-# PREDICTING NAME ENTITIES IN CONTEXT
+## PREDICTING NAME ENTITIES IN CONTEXT
 
 Models are statistical and not always right. Whether their predictions are correct depends on the training data and the text you’re processing. Let’s take a look at an example.
 
